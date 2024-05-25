@@ -1,0 +1,2 @@
+# CaseJuntosSomos-
+DESAFIO TÉCNICO: JUNTOS SOMOS +
