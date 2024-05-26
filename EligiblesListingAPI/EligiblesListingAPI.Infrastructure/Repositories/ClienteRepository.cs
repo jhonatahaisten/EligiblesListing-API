@@ -16,7 +16,7 @@ namespace EligiblesListingAPI.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<Cliente> GetEligibleCliente(string region, string classification)
+        public IEnumerable<Customer> GetEligibleCliente(string region, string classification)
         {
             return _context.Customers
                            .Where(c => c.Region == region && c.Classification == classification)

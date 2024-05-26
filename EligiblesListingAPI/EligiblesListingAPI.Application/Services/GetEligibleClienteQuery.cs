@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace EligiblesListingAPI.Application.Services
 {
-    public class GetEligibleClienteQuery : IGetEligibleClienteQuery
+    public class GetEligibleClienteQuery : IGetEligibleCustomersQuery
     {
         private readonly IClienteRepository _clienteRepository;
 

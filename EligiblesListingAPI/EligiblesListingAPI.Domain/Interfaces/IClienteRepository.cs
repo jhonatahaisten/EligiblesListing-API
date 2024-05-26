@@ -4,6 +4,6 @@ namespace EligiblesListingAPI.Domain.Interfaces
 {
     public interface IClienteRepository
     {
-        IEnumerable<Cliente> GetEligibleCliente(string region, string classification);
+        IEnumerable<Customer> GetEligibleCliente(string region, string classification);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace EligiblesListingAPI.Application.Interfaces
 {
-    public interface IGetEligibleClienteQuery
+    public interface IGetEligibleCustomersQuery
     {
         IEnumerable<ClienteDto> Execute(string region, string classification);
       

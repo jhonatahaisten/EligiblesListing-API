@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EligiblesListingAPI.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb82b281962d171675578cba8273b99a67328288")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56f5f90ed2b8060d1e550d7f01f7ef2d5f7324c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EligiblesListingAPI.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EligiblesListingAPI.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

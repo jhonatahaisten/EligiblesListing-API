@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore;
 using EligiblesListingAPI.Application.Interfaces;
 using EligiblesListingAPI.Application.Services;
 using EligiblesListingAPI.Domain.Interfaces;
@@ -15,13 +15,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-// Configure DbContext
-builder.Services.AddDbContext<ClienteContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// Register repositories and services
-builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
-builder.Services.AddScoped<IGetEligibleClienteQuery, GetEligibleClienteQuery>();
+builder.Services.AddSingleton<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IGetEligibleCustomersQuery, GetEligibleClienteQuery>();
 
 
 

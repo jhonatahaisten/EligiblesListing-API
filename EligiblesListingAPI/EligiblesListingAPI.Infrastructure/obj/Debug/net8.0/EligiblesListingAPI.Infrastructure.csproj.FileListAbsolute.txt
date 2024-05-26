@@ -10,3 +10,4 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Inf
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\refint\EligiblesListingAPI.Infrastructure.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\ref\EligiblesListingAPI.Infrastructure.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.csproj.AssemblyReference.cache
