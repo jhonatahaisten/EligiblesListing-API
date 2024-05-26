@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "EligiblesListingAPI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EligiblesListingAPI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EligiblesListingAPI.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EligiblesListingAPI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj",
+      "msbuildProject": "../EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "EligiblesListingAPI.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jhonata.santos\\.nuget\\packages\\": {},
@@ -42,7 +61,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj": {
+              "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

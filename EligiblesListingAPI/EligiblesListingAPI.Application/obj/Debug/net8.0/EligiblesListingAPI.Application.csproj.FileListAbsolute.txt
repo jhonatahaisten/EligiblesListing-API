@@ -1,0 +1,5 @@
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.AssemblyInfoInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.AssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.csproj.CoreCompileInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.sourcelink.json

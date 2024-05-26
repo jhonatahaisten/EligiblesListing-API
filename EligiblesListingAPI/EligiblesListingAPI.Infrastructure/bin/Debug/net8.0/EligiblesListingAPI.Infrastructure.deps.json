@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EligiblesListingAPI.Infrastructure/1.0.0": {
+        "runtime": {
+          "EligiblesListingAPI.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EligiblesListingAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

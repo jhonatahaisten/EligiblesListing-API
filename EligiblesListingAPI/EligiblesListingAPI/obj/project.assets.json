@@ -88,6 +88,42 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "EligiblesListingAPI.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EligiblesListingAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EligiblesListingAPI.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EligiblesListingAPI.Application.dll": {}
+        }
+      },
+      "EligiblesListingAPI.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EligiblesListingAPI.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EligiblesListingAPI.Domain.dll": {}
+        }
+      },
+      "EligiblesListingAPI.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EligiblesListingAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EligiblesListingAPI.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EligiblesListingAPI.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -420,10 +456,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "EligiblesListingAPI.Application/1.0.0": {
+      "type": "project",
+      "path": "../EligiblesListingAPI.Application/EligiblesListingAPI.Application.csproj",
+      "msbuildProject": "../EligiblesListingAPI.Application/EligiblesListingAPI.Application.csproj"
+    },
+    "EligiblesListingAPI.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj",
+      "msbuildProject": "../EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj"
+    },
+    "EligiblesListingAPI.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EligiblesListingAPI.Infrastructure/EligiblesListingAPI.Infrastructure.csproj",
+      "msbuildProject": "../EligiblesListingAPI.Infrastructure/EligiblesListingAPI.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EligiblesListingAPI.Application >= 1.0.0",
+      "EligiblesListingAPI.Domain >= 1.0.0",
+      "EligiblesListingAPI.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -462,7 +516,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj": {
+              "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj"
+            },
+            "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj": {
+              "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj"
+            },
+            "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Infrastructure\\EligiblesListingAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Infrastructure\\EligiblesListingAPI.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
