@@ -1,0 +1,6 @@
+@EligiblesListingAPI_HostAddress = http://localhost:5231
+
+GET {{EligiblesListingAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
