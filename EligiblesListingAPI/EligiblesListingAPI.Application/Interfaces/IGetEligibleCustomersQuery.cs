@@ -1,10 +1,11 @@
 ﻿using EligiblesListingAPI.Application.DTO;
+using EligiblesListingAPI.Domain.Entities;
 
 namespace EligiblesListingAPI.Application.Interfaces
 {
     public interface IGetEligibleCustomersQuery
     {
-        IEnumerable<ClienteDto> Execute(string region, string classification);
-      
+        IEnumerable<Customer> Execute();
+
     }
 }

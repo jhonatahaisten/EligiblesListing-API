@@ -15,8 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddSingleton<IClienteRepository, ClienteRepository>();
-builder.Services.AddScoped<IGetEligibleCustomersQuery, GetEligibleClienteQuery>();
+builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IGetEligibleCustomersQuery, GetEligibleCustomersQuery>();
+
 
 
 
