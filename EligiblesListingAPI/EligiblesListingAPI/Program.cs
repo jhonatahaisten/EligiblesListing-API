@@ -1,11 +1,10 @@
-//using Microsoft.EntityFrameworkCore;
 using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Application.Services;
 using EligiblesListingAPI.Domain.Interfaces;
 using EligiblesListingAPI.Infrastructure.Data;
-using EligiblesListingAPI.Infrastructure.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -13,10 +12,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
-builder.Services.AddSingleton<ICustomerService, DataService>();
-builder.Services.AddScoped<IGetEligibleCustomersQuery, GetEligibleCustomersQuery>();
-
+//builder.Services.AddSingleton<ICustomerRepository, EligiblesListingAPI.Infrastructure.Repositories.CustomerService>();
+builder.Services.AddSingleton<ICustomerService, EligiblesListingAPI.Application.Services.CustomerService>();
+builder.Services.AddSingleton<IDataService, DataService>();
+//builder.Services.AddScoped<IGetEligibleCustomersQuery, GetEligibleCustomersQuery>();
 
 var app = builder.Build();
 

@@ -6,18 +6,18 @@ using EligiblesListingAPI.Domain.Interfaces;
 
 namespace EligiblesListingAPI.Application.Services
 {
-    public class GetEligibleCustomersQuery : IGetEligibleCustomersQuery
-    {
-        private readonly ICustomerRepository _customerRepository;
+    //public class GetEligibleCustomersQuery : IGetEligibleCustomersQuery
+    //{
+    //  //  private readonly ICustomerRepository _customerRepository;
 
-        public GetEligibleCustomersQuery(ICustomerRepository customerRepository)
-        {
-            _customerRepository = customerRepository;
-        }
+    //    //public GetEligibleCustomersQuery(ICustomerRepository customerRepository)
+    //    //{
+    //    //    _customerRepository = customerRepository;
+    //    //}
 
-        public IEnumerable<Customer> Execute()
-        {
-            return _customerRepository.GetAll();
-        }
-    }
+    //    //public IEnumerable<Customer> Execute()
+    //    //{
+    //    //    return _customerRepository.GetAll();
+    //    //}
+    //}
 }

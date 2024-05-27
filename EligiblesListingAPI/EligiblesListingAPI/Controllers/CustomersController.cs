@@ -1,14 +1,7 @@
-using CsvHelper;
 using Microsoft.AspNetCore.Mvc;
 using EligiblesListingAPI.Domain.Entities;
-using System.Globalization;
-using System.Text.Json;
 using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Application.Services;
 using EligiblesListingAPI.Domain.Interfaces;
-using CsvHelper.Configuration;
-using EligiblesListingAPI.Infrastructure.Data;
-using System.Diagnostics.Metrics;
 
 namespace EligiblesListingAPI.Controllers
 {
@@ -16,55 +9,38 @@ namespace EligiblesListingAPI.Controllers
     [Route("api/[controller]")]
     public class CustomersController : ControllerBase
     {
-        private readonly DataService _dataService;
-        private readonly CustomerService _customerService;
+        private readonly IDataService _iDataService;
+        private readonly ICustomerService _iCustomerService;
+        private readonly HttpClient _httpClient;
 
-        public CustomersController(DataService dataService, CustomerService customerService)
+        public CustomersController(IDataService iDataService, ICustomerService iCustomerService)
         {
-            _dataService = dataService;
-            _customerService = customerService;
+            _iDataService = iDataService;
+            _iCustomerService = iCustomerService;
+            _httpClient = new HttpClient();
         }
+          
+
 
         [HttpGet("classify")]
         public async Task<IActionResult> ClassifyCustomers([FromQuery] string dataLink)
         {
-            IEnumerable<Customer> dataCustomers;
-      
+            if (!(await _httpClient.GetAsync(dataLink)).IsSuccessStatusCode)
+            {
+                return BadRequest("Failed to download file.");
+            }         
+
+            IEnumerable<CustomerResponse> dataCustomers;      
 
             if (dataLink.EndsWith(".csv"))
-                dataCustomers = await _dataService.GetCustomersFromCsvLink(dataLink);
+                dataCustomers =  _iDataService.GetCustomersFromCsvLink(dataLink);
+            else if (dataLink.EndsWith(".json"))
+                dataCustomers =  _iDataService.GetCustomersFromJsonLink(dataLink);
             else
-                dataCustomers = await _dataService.GetCustomersFromJsonLink(dataLink);
+                return BadRequest("Invalid file type.");
+       
 
-            string country = "BR";
-
-            // Combinar clientes de ambos os links
-           // var allCustomers = new List<Customer>();
-         //   allCustomers.AddRange(dataCustomers);
-        
-
-            // Aplicar transformações e classificar os clientes
-            var classifiedCustomers = new List<object>();
-            foreach (var customer in dataCustomers)
-            {
-                var normalizedGender = _customerService.NormalizeGender(customer.Gender);
-                var classifiedType = _customerService.ClassifyCustomer(customer);
-
-                customer.Gender = normalizedGender;
-                _customerService.TransformPhoneNumbers(customer.Phone, country);
-                _customerService.AddNationality(customer);
-                _customerService.RemoveAgeFields(customer);
-
-                var simplifiedCustomer = _customerService.SimplifyStructure(customer);
-
-                classifiedCustomers.Add(new
-                {
-                    type = classifiedType,
-                    customer = simplifiedCustomer
-                });
-            }
-
-            return Ok(classifiedCustomers);
+            return Ok(dataCustomers);
         }
     }
 }

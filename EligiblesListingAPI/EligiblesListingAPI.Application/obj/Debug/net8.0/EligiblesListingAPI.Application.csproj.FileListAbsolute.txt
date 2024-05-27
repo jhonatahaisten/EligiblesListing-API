@@ -14,3 +14,19 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.App
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\refint\EligiblesListingAPI.Application.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Application\obj\Debug\net8.0\ref\EligiblesListingAPI.Application.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\bin\Debug\net8.0\EligiblesListingAPI.Application.deps.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\bin\Debug\net8.0\EligiblesListingAPI.Application.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\bin\Debug\net8.0\EligiblesListingAPI.Application.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\bin\Debug\net8.0\EligiblesListingAPI.Domain.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\bin\Debug\net8.0\EligiblesListingAPI.Domain.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.csproj.AssemblyReference.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.AssemblyInfoInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.AssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.csproj.CoreCompileInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.sourcelink.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\Eligible.BF8D3277.Up2Date
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\refint\EligiblesListingAPI.Application.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\EligiblesListingAPI.Application.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Application\obj\Debug\net8.0\ref\EligiblesListingAPI.Application.dll

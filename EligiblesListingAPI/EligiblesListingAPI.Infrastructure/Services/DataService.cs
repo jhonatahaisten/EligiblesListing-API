@@ -1,34 +1,63 @@
 ﻿using EligiblesListingAPI.Domain.Entities;
+using EligiblesListingAPI.Application.Interfaces;
 using EligiblesListingAPI.Domain.Interfaces;
+using System.Globalization;
+using CsvHelper;
+using CsvHelper.Configuration;
+using Newtonsoft.Json;
+using EligiblesListingAPI.Application.Services;
+using System.Net;
+using System.Reflection.PortableExecutable;
+using System.Text;
+
 
 namespace EligiblesListingAPI.Infrastructure.Data
 {
-    public class DataService : ICustomerService
+    public class DataService : IDataService
     {
-        private readonly HttpClient _httpClient;
+        private readonly ICustomerService _iCustomerService;
 
-        public DataService(HttpClient httpClient)
+        public IEnumerable<CustomerResponse> GetCustomersFromCsvLink(string csvContent)
         {
-            _httpClient = httpClient; //?? throw new ArgumentNullException(nameof(httpClient));
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(csvContent);
+            HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                HasHeaderRecord = true,
+                HeaderValidated = null,
+                Delimiter = ",",
+                Encoding = Encoding.UTF8
+            };
+
+            using (StreamReader sr = new StreamReader(resp.GetResponseStream()))
+            {
+                string results = sr.ReadToEnd();
+                List<Customer> rawUsers = new List<Customer>();
+
+                using (var reader = new StringReader(results))
+                using (var csv = new CsvReader(reader, config))
+                {
+                    csv.Context.RegisterClassMap<RawUserMap>();
+                    try
+                    {
+                        csv.Context.RegisterClassMap<RawUserMap>();
+                        rawUsers = csv.GetRecords<Customer>().ToList();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Error parsing CSV content: " + ex.Message, ex);
+                    }
+                }
+
+                return records.ToList().Select(_iCustomerService.ConvertToUser).ToList();
+            }
+        }
+        public IEnumerable<CustomerResponse> GetCustomersFromJsonLink(string jsonContent)
+        {
+            var rawUsers = JsonConvert.DeserializeObject<IEnumerable<Customer>>(jsonContent);
+            return rawUsers.Select(_iCustomerService.ConvertToUser).ToList();
         }
 
-        public async Task<IEnumerable<Customer>> GetCustomersFromCsvLink(string csvLink)
-        {
-            var csvContent = await _httpClient.GetStringAsync(csvLink);
-            // Transformar CSV em objetos Customer conforme as regras de negócio
-            var customers = new List<Customer>();
-            // Implementar a lógica de transformação
-            return customers;
-        }
-
-        public async Task<IEnumerable<Customer>> GetCustomersFromJsonLink(string jsonLink)
-        {
-            var jsonContent = await _httpClient.GetStringAsync(jsonLink);
-            // Transformar JSON em objetos Customer conforme as regras de negócio
-            var customers = new List<Customer>();
-            // Implementar a lógica de transformação
-            return customers;
-        }
     }
 }
-

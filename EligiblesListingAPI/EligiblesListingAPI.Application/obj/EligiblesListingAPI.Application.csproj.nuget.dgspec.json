@@ -57,6 +57,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[32.0.3, )"
+            },
             "libphonenumber-csharp": {
               "target": "Package",
               "version": "[8.13.37, )"

@@ -57,6 +57,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[32.0.3, )"
+            },
             "libphonenumber-csharp": {
               "target": "Package",
               "version": "[8.13.37, )"
@@ -182,6 +186,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj": {
+                "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj"
+              },
               "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj": {
                 "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Domain\\EligiblesListingAPI.Domain.csproj"
               }
@@ -202,6 +209,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[32.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
