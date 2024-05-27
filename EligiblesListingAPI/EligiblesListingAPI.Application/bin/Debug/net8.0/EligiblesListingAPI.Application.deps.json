@@ -1,0 +1,52 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EligiblesListingAPI.Application/1.0.0": {
+        "dependencies": {
+          "EligiblesListingAPI.Domain": "1.0.0",
+          "libphonenumber-csharp": "8.13.37"
+        },
+        "runtime": {
+          "EligiblesListingAPI.Application.dll": {}
+        }
+      },
+      "libphonenumber-csharp/8.13.37": {
+        "runtime": {
+          "lib/net7.0/PhoneNumbers.dll": {
+            "assemblyVersion": "8.13.37.0",
+            "fileVersion": "8.13.37.0"
+          }
+        }
+      },
+      "EligiblesListingAPI.Domain/1.0.0": {
+        "runtime": {
+          "EligiblesListingAPI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EligiblesListingAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "libphonenumber-csharp/8.13.37": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/XsqKMfCgeSzl/ZhOeV1frhLVizj08gJDZgCzlSzUxj63ZWMv7ZIRQP2MBUw7Bd6Mb9GAe+S4dQEo0OMQM+Tfg==",
+      "path": "libphonenumber-csharp/8.13.37",
+      "hashPath": "libphonenumber-csharp.8.13.37.nupkg.sha512"
+    },
+    "EligiblesListingAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

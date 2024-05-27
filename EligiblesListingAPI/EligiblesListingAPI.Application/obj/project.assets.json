@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "libphonenumber-csharp/8.13.37": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "EligiblesListingAPI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -15,6 +28,25 @@
     }
   },
   "libraries": {
+    "libphonenumber-csharp/8.13.37": {
+      "sha512": "/XsqKMfCgeSzl/ZhOeV1frhLVizj08gJDZgCzlSzUxj63ZWMv7ZIRQP2MBUw7Bd6Mb9GAe+S4dQEo0OMQM+Tfg==",
+      "type": "package",
+      "path": "libphonenumber-csharp/8.13.37",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/PhoneNumbers.dll",
+        "lib/net6.0/PhoneNumbers.xml",
+        "lib/net7.0/PhoneNumbers.dll",
+        "lib/net7.0/PhoneNumbers.xml",
+        "lib/netstandard2.0/PhoneNumbers.dll",
+        "lib/netstandard2.0/PhoneNumbers.xml",
+        "libphonenumber-csharp.8.13.37.nupkg.sha512",
+        "libphonenumber-csharp.nuspec"
+      ]
+    },
     "EligiblesListingAPI.Domain/1.0.0": {
       "type": "project",
       "path": "../EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj",
@@ -23,7 +55,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "EligiblesListingAPI.Domain >= 1.0.0"
+      "EligiblesListingAPI.Domain >= 1.0.0",
+      "libphonenumber-csharp >= 8.13.37"
     ]
   },
   "packageFolders": {
@@ -82,6 +115,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "libphonenumber-csharp": {
+            "target": "Package",
+            "version": "[8.13.37, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

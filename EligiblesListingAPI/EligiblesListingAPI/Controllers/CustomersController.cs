@@ -4,8 +4,11 @@ using EligiblesListingAPI.Domain.Entities;
 using System.Globalization;
 using System.Text.Json;
 using EligiblesListingAPI.Application.Interfaces;
+using EligiblesListingAPI.Application.Services;
 using EligiblesListingAPI.Domain.Interfaces;
 using CsvHelper.Configuration;
+using EligiblesListingAPI.Infrastructure.Data;
+using System.Diagnostics.Metrics;
 
 namespace EligiblesListingAPI.Controllers
 {
@@ -13,42 +16,55 @@ namespace EligiblesListingAPI.Controllers
     [Route("api/[controller]")]
     public class CustomersController : ControllerBase
     {
+        private readonly DataService _dataService;
+        private readonly CustomerService _customerService;
 
-        private readonly IGetEligibleCustomersQuery _getEligibleCustomersQuery;
-        private readonly ICustomerRepository _customerRepository;
-
-        public CustomersController(IGetEligibleCustomersQuery getEligibleCustomersQuery, ICustomerRepository customerRepository)
+        public CustomersController(DataService dataService, CustomerService customerService)
         {
-            _getEligibleCustomersQuery = getEligibleCustomersQuery;
-            _customerRepository = customerRepository;
+            _dataService = dataService;
+            _customerService = customerService;
         }
 
-        [HttpPost("csv")]
-        public IActionResult PostCsv([FromBody] string csvContent)
+        [HttpGet("classify")]
+        public async Task<IActionResult> ClassifyCustomers([FromQuery] string dataLink)
         {
-            var customers = ParseCsv(csvContent);
-            foreach (var customer in customers)
+            IEnumerable<Customer> dataCustomers;
+      
+
+            if (dataLink.EndsWith(".csv"))
+                dataCustomers = await _dataService.GetCustomersFromCsvLink(dataLink);
+            else
+                dataCustomers = await _dataService.GetCustomersFromJsonLink(dataLink);
+
+            string country = "BR";
+
+            // Combinar clientes de ambos os links
+           // var allCustomers = new List<Customer>();
+         //   allCustomers.AddRange(dataCustomers);
+        
+
+            // Aplicar transformações e classificar os clientes
+            var classifiedCustomers = new List<object>();
+            foreach (var customer in dataCustomers)
             {
-                _customerRepository.Add(customer);
-            }
-            return Ok(customers);
-        }
+                var normalizedGender = _customerService.NormalizeGender(customer.Gender);
+                var classifiedType = _customerService.ClassifyCustomer(customer);
 
-        [HttpPost("json")]
-        public IActionResult PostJson([FromBody] JsonElement jsonContent)
-        {
-            var customer = JsonSerializer.Deserialize<Customer>(jsonContent.GetRawText());
-            _customerRepository.Add(customer);
-            return Ok(customer);
-        }
+                customer.Gender = normalizedGender;
+                _customerService.TransformPhoneNumbers(customer.Phone, country);
+                _customerService.AddNationality(customer);
+                _customerService.RemoveAgeFields(customer);
 
-        private IEnumerable<Customer> ParseCsv(string csvContent)
-        {
-            using (var reader = new StringReader(csvContent))
-            using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)))
-            {
-                return csv.GetRecords<Customer>().ToList();
+                var simplifiedCustomer = _customerService.SimplifyStructure(customer);
+
+                classifiedCustomers.Add(new
+                {
+                    type = classifiedType,
+                    customer = simplifiedCustomer
+                });
             }
+
+            return Ok(classifiedCustomers);
         }
     }
 }

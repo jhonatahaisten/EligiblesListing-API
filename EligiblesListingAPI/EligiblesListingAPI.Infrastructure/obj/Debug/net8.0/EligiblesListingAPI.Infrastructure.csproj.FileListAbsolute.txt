@@ -1,13 +1,16 @@
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.deps.json
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Domain.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Domain.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.csproj.AssemblyReference.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.AssemblyInfoInputs.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.AssemblyInfo.cs
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.sourcelink.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\Eligible.842F2B68.Up2Date
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\refint\EligiblesListingAPI.Infrastructure.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\ref\EligiblesListingAPI.Infrastructure.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.csproj.AssemblyReference.cache
