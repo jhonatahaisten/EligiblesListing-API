@@ -1,14 +1,35 @@
-﻿using EligiblesListingAPI.Application.Interfaces;
+﻿using EligiblesListingAPI.Application.DTO;
+using EligiblesListingAPI.Application.Interfaces;
 using EligiblesListingAPI.Domain.Entities;
 using EligiblesListingAPI.Domain.Enuns;
+using EligiblesListingAPI.Domain.Interfaces;
 using PhoneNumbers;
 using System.Globalization;
-
 
 namespace EligiblesListingAPI.Application.Services
 {
     public class CustomerService : ICustomerService
-    {      
+    {
+        private readonly List<(double minLon, double minLat, double maxLon, double maxLat)> especialBoxes;
+        private readonly List<(double minLon, double minLat, double maxLon, double maxLat)> normalBoxes;
+        private readonly List<CustomerResponse> _customers;
+
+        public CustomerService(IDataLoadService iDataLoadService)
+        {
+
+            _customers = iDataLoadService.GetAll();
+
+            especialBoxes = new List<(double minLon, double minLat, double maxLon, double maxLat)>
+            {
+                (-2.196998, -46.361899, -15.411580, -34.276938),
+                (-19.766959, -52.997614, -23.966413, -44.428305)
+            };
+
+            normalBoxes = new List<(double minLon, double minLat, double maxLon, double maxLat)>
+            {
+                (-26.155681, -54.777426, -34.016466, -46.603598)
+            };
+        }
 
         public string NormalizeGender(string gender)
         {
@@ -35,53 +56,50 @@ namespace EligiblesListingAPI.Application.Services
             }
             catch (NumberParseException ex)
             {
-
                 return null;
             }
         }
-
-        public ERegion DetermineRegion(string latitude, string longitude)
+        public ERegion DetermineRegion(string state)
         {
-            double lat = double.Parse(latitude, CultureInfo.InvariantCulture);
-            double lon = double.Parse(longitude, CultureInfo.InvariantCulture);
-
-            if (lat >= -15.0 && lat <= 5.0 && lon >= -75.0 && lon <= -50.0)
-                return ERegion.Norte;
-            if (lat >= -15.0 && lat <= 0.0 && lon >= -45.0 && lon <= -35.0)
-                return ERegion.Nordeste;
-            if (lat >= -24.0 && lat <= -15.0 && lon >= -60.0 && lon <= -45.0)
-                return ERegion.CentroOeste;
-            if (lat >= -24.0 && lat <= -15.0 && lon >= -45.0 && lon <= -35.0)
-                return ERegion.Sudeste;
-            if (lat <= -24.0 && lon >= -60.0 && lon <= -45.0)
-                return ERegion.Sul;
-
-            return ERegion.Desconhecido;
+            return StateRegionMapping.GetRegionByState(state);
         }
+
         public EType ClassifyUserByCoordinates(string latitude, string longitude)
         {
+            if (string.IsNullOrEmpty(latitude) || string.IsNullOrEmpty(longitude))
+                return EType.laborious;
+
             double lat = double.Parse(latitude, CultureInfo.InvariantCulture);
             double lon = double.Parse(longitude, CultureInfo.InvariantCulture);
 
-            if ((lat >= -46.361899 && lat <= -34.276938 && lon >= -2.196998 && lon <= -15.411580) ||
-                (lat >= -52.997614 && lat <= -44.428305 && lon >= -19.766959 && lon <= -23.966413))
+            foreach (var box in especialBoxes)
             {
-                return EType.special;
+                if ((lon >= box.minLon && lon <= box.maxLon) &&
+                    (lat >= box.minLat && lat <= box.maxLat))
+                {
+                    return EType.special;
+                }
             }
 
-            if (lat >= -54.777426 && lat <= -46.603598 && lon >= -26.155681 && lon <= -34.016466)
+            foreach (var box in normalBoxes)
             {
-                return EType.normal;
+
+                if ((lon >= box.minLon && lon <= box.maxLon) &&
+                    (lat >= box.minLat && lat <= box.maxLat))
+                {
+                    return EType.normal;
+                }
             }
 
             return EType.laborious;
         }
 
-        public CustomerResponse ConvertToUser(Customer rawUser)
+        public List<CustomerResponse> ConvertToUser(List<Customer> rawUsers)
         {
-            return new CustomerResponse
+            List<CustomerResponse> customerResponses = rawUsers.Select(rawUser => new CustomerResponse
             {
-                Type = ClassifyUserByCoordinates(rawUser.Location.Coordinates.Latitude, rawUser.Location.Coordinates.Longitude),
+                Nationality = AddNationality(),
+                Type = ClassifyUserByCoordinates(rawUser.Location.Coordinates.Latitude, rawUser.Location.Coordinates.Longitude).ToString(),
                 Gender = rawUser.Gender.ToLower() == "male" ? "M" : "F",
                 Name = new Name
                 {
@@ -91,11 +109,11 @@ namespace EligiblesListingAPI.Application.Services
                 },
                 Location = new Location
                 {
-                    Region = DetermineRegion(rawUser.Location.Coordinates.Latitude, rawUser.Location.Coordinates.Longitude),
+                    Region = DetermineRegion(rawUser.Location.State).ToString(),
                     Street = rawUser.Location.Street,
                     City = rawUser.Location.City,
                     State = rawUser.Location.State,
-                    Postcode = rawUser.Location.Postcode, 
+                    Postcode = rawUser.Location.Postcode,
                     Coordinates = new Coordinates
                     {
                         Latitude = rawUser.Location.Coordinates.Latitude,
@@ -106,19 +124,48 @@ namespace EligiblesListingAPI.Application.Services
                         Offset = rawUser.Location.Timezone.Offset,
                         Description = rawUser.Location.Timezone.Description
                     }
-                },          
+                },
 
-                Email = rawUser.Email,  
+                Email = rawUser.Email,
                 Birthday = rawUser.Birthday.Date.ToString("yyyy-MM-ddTHH:mm:ssZ"),
                 Registered = rawUser.Registered.Date.ToString("yyyy-MM-ddTHH:mm:ssZ"),
-                TelephoneNumbers = [TransformPhoneNumbers(rawUser.Phone, rawUser.Nationality)],
-                MobileNumbers = [TransformPhoneNumbers(rawUser.Cell, rawUser.Nationality)],
-                Picture = rawUser.Picture,
-                Nationality = rawUser.Nationality,
-               
-            };
+                TelephoneNumbers = [TransformPhoneNumbers(rawUser.Phone, AddNationality())],
+                MobileNumbers = [TransformPhoneNumbers(rawUser.Cell, AddNationality())],
+                Picture = rawUser.Picture
+
+
+            }).ToList();
+            return customerResponses;
+
         }
 
+        public List<CustomerResponse> GetFilteredCustomers(PagedRequest pagedRequest)
+        {
+             List<CustomerResponse> filteredCustomers = new List<CustomerResponse>();
+
+            foreach (var user in pagedRequest.Users)
+            {
+                var filteredCustomer = _customers.Where(c =>c.Type == user.Type && c.Location.Region == user.Region);
+                filteredCustomers.AddRange(filteredCustomer);     
+
+            }
+           // (EType)Enum.Parse(typeof(EType)
+
+            //var customerResponses = ConvertToUser(filteredCustomers);
+            List<CustomerResponse> pagedCustomers = filteredCustomers
+                .Skip((pagedRequest.PageNumber - 1) * pagedRequest.PageSize)
+                .Take(pagedRequest.PageSize)
+                .ToList();
+
+            return pagedCustomers;
+         
+        }
+
+        private List<Customer> GetAllCustomers()
+        {
+
+            return new List<Customer>();
+        }
 
     }
 }

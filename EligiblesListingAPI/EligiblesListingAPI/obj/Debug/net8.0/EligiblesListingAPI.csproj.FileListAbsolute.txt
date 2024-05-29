@@ -3,7 +3,6 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfoInputs.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfo.cs
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.CoreCompileInputs.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.sourcelink.json
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\appsettings.Development.json
@@ -81,3 +80,4 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.genruntimeconfig.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\ref\EligiblesListingAPI.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

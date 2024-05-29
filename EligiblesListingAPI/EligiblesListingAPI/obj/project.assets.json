@@ -961,6 +961,9 @@
       "EligiblesListingAPI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
         "compile": {
           "bin/placeholder/EligiblesListingAPI.Domain.dll": {}
         },
@@ -3587,8 +3590,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "http://192.168.134.129/FcNugetServer/nuget/": {},
+        "http://nexus.funcionalcorp.net.br/repository/fun-nuget-group/": {},
         "http://vmbtfs01des/FcNugetServer/Nuget/": {},
-        "http://vmnexus01.funcional.local/repository/fun-nuget-hosted/nuget-group/": {},
         "http://vmpltapbru01dev.funcional.local/NuGetServer/nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -3676,7 +3679,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://vmnexus01.funcional.local/repository/fun-nuget-hosted/nuget-group/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
+      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://nexus.funcionalcorp.net.br/repository/fun-nuget-group/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
     },
     {
       "code": "NU1803",

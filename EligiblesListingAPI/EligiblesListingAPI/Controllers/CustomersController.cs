@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using EligiblesListingAPI.Domain.Entities;
 using EligiblesListingAPI.Application.Interfaces;
 using EligiblesListingAPI.Domain.Interfaces;
+using EligiblesListingAPI.Application.Services;
+using EligiblesListingAPI.Application.DTO;
 
 namespace EligiblesListingAPI.Controllers
 {
@@ -18,29 +20,13 @@ namespace EligiblesListingAPI.Controllers
             _iDataService = iDataService;
             _iCustomerService = iCustomerService;
             _httpClient = new HttpClient();
-        }
-          
+        }        
 
-
-        [HttpGet("classify")]
-        public async Task<IActionResult> ClassifyCustomers([FromQuery] string dataLink)
+        [HttpPost("Eligibles")]
+        public async Task<IActionResult> ClassifyCustomers([FromBody] PagedRequest filterRequest)
         {
-            if (!(await _httpClient.GetAsync(dataLink)).IsSuccessStatusCode)
-            {
-                return BadRequest("Failed to download file.");
-            }         
-
-            IEnumerable<CustomerResponse> dataCustomers;      
-
-            if (dataLink.EndsWith(".csv"))
-                dataCustomers =  _iDataService.GetCustomersFromCsvLink(dataLink);
-            else if (dataLink.EndsWith(".json"))
-                dataCustomers =  _iDataService.GetCustomersFromJsonLink(dataLink);
-            else
-                return BadRequest("Invalid file type.");
-       
-
-            return Ok(dataCustomers);
+            var filteredResponse = _iCustomerService.GetFilteredCustomers(filterRequest);
+            return Ok(filteredResponse);
         }
     }
 }

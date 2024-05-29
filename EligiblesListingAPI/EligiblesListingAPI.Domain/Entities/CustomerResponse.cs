@@ -4,8 +4,8 @@ namespace EligiblesListingAPI.Domain.Entities
 {  
     public class CustomerResponse
     {
-        public string Id { get; set; }
-        public EType Type { get; set; }
+       // public string Id { get; set; }
+        public string Type { get; set; }
         public string Gender { get; set; }
         public Name Name { get; set; }
         public Location Location { get; set; }

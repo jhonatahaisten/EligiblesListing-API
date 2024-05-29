@@ -22,3 +22,4 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Domain\obj\Debug\net8.0\refint\EligiblesListingAPI.Domain.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Domain\obj\Debug\net8.0\EligiblesListingAPI.Domain.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Domain\obj\Debug\net8.0\ref\EligiblesListingAPI.Domain.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Domain\obj\Debug\net8.0\EligiblesListingAPI.Domain.csproj.AssemblyReference.cache
