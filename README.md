@@ -147,6 +147,19 @@ A API estará disponível em https://localhost:44389 por padrão.
     	}
       ]
   ```
+### Executar via Docker
+
+Construir a imagem Docker
+
+  ```bash
+docker build -f ./EligiblesListingAPI/Dockerfile -t case/EligiblesListingAPI:latest .
+  ```
+
+Executar o Container Docker
+
+  ```bash
+Para rodar o docker: docker run -it case/EligiblesListingAPI:latest
+  ```
 
 ### Executar Testes de Integração
 Para executar os testes de integração, use o comando:
