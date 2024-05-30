@@ -1,9 +1,7 @@
 # Code Challenge Juntos Somos+
 ## --Eligibles Listing API--
 
-Está é uma API construída usando ASP.NET seguindo os princípios da Clean Architecture. Esta API permite a listagem e filtragem de clientes a partir de dados fornecidos em formatos CSV e JSON.
-- API Rest com swagger
-, Swagger, Linq, Injeção de dependecia, conceitos de orientação a objeto, Docker,
+Está é uma API construída usando ASP.NET seguindo os princípios da Clean Architecture. Esta API permite a listagem, filtragem e paginação de clientes a partir de dados fornecidos em formatos CSV e JSON.
 
 ## Visão Geral
 
@@ -21,7 +19,7 @@ A solução é organizada em quatro camadas principais seguindo a Clean Architec
   - Serviços Específicos de Infraestrutura
 
 - **EligiblesListingAPI.Core:** Lógica de negócios da aplicação.  
-  - Abstrações para lógica de negócios e infraestrutura
+  - Abstrações para lógica de negócios
 
 - **EligiblesListingAPI.Domain:** Contém tudo o que deve ser compartilhado entre os projetos.
   - DTOs
@@ -62,8 +60,8 @@ No arquivo `appsettings.json`, configure as URLs para os dados CSV e JSON:
 
 1. Clone o repositório:
 ```bash
-    git clone https://github.com/seu-usuario/CaseJuntosSomosMais.git
-    cd eligibles-listing-api
+    git clone https://github.com/jhonatahaisten/CaseJuntosSomosMais.git
+    cd EligiblesListingAPI
 ```
 
 2. Restaure as dependências:
@@ -81,7 +79,7 @@ No arquivo `appsettings.json`, configure as URLs para os dados CSV e JSON:
 
 Para executar a API, use o comando:
 ```bash
-    dotnet run --project Auth.Api
+    dotnet run --project EligiblesListingAPI
 ```
 
 A API estará disponível em https://localhost:44389 por padrão.
@@ -92,72 +90,67 @@ A API estará disponível em https://localhost:44389 por padrão.
   - Request Body:
 
   ```json
-        {
-      "PageNumber": 1,
-      "PageSize": 10,
-      "Users": [
-        {
-          "Region": "Nordeste",
-          "Type": "laborious"
+       {
+        "pageNumber": 8,
+        "pageSize": 1,
+        "totalCount": 10,
+        "users": [
+      		{
+         "Region": "sul",
+      		"Type": "laborious"
+		      }
+          ]  
         }
-      ]
-    }
   ```
   - Response:
 
   ```json
-  [
-    {
-      "Type": "laborious",
-      "Gender": "F",
-      "Name": {
-        "Title": "ms",
-        "First": "jerueza",
-        "Last": "moura"
-      },
-      "Location": {
-        "Region": "Nordeste",
-        "Street": "416 rua três",
-        "City": "magé",
-        "State": "alagoas",
-        "Postcode": 73804,
-        "Coordinates": {
-          "Latitude": "15.3004",
-          "Longitude": "-82.4361"
-        },
-        "Timezone": {
-          "Offset": "+4:00",
-          "Description": "Abu Dhabi, Muscat, Baku, Tbilisi"
-        }
-      },
-      "Nationality": "BR",
-      "Email": "jerueza.moura@example.com",
-      "Birthday": "1948-08-29T06:01:44Z",
-      "Registered": "2013-11-28T12:04:46Z",
-      "TelephoneNumbers": [
-        "+555667280423"
-      ],
-      "MobileNumbers": [
-        "+551840117309"
-      ],
-      "Picture": {
-        "Large": "https://randomuser.me/api/portraits/women/14.jpg",
-        "Medium": "https://randomuser.me/api/portraits/med/women/14.jpg",
-        "Thumbnail": "https://randomuser.me/api/portraits/thumb/women/14.jpg"
-      }
-    }
-  ]
-  ```
-### Executar Testes Unitários
-Os testes unitários estão localizados no projeto Auth.UnitTests. Para executar os testes unitários, use o comando:
-
-  ```bash
-dotnet test Auth.UnitTests
+      [
+    	{
+    		"type": "laborious",
+    		"gender": "f",
+    		"name": {
+    			"title": "mrs",
+    			"first": "melina",
+    			"last": "souza"
+    		},
+    		"location": {
+    			"region": "sul",
+    			"street": "1856 rua um",
+    			"city": "garanhuns",
+    			"state": "santa catarina",
+    			"postcode": 51640,
+    			"coordinates": {
+    				"latitude": "-16.4160",
+    				"longitude": "-93.7689"
+    			},
+    			"timezone": {
+    				"offset": "+2:00",
+    				"description": "Kaliningrad, South Africa"
+    			}
+    		},
+    		"nationality": "BR",
+    		"email": "melina.souza@example.com",
+    		"birthday": "1963-11-03T13:17:36Z",
+    		"registered": "2015-07-08T17:33:35Z",
+    		"telephoneNumbers": [
+    			"+552894017853"
+    		],
+    		"mobileNumbers": [
+    			"+556111414458"
+    		],
+    		"picture": {
+    			"large": "https://randomuser.me/api/portraits/women/46.jpg",
+    			"medium": "https://randomuser.me/api/portraits/med/women/46.jpg",
+    			"thumbnail": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+    		}
+    	}
+      ]
   ```
 
-Executar Testes de Integração
-Os testes de integração estão localizados no projeto Auth.IntegrationTests. Para executar os testes de integração, use o comando:
+### Executar Testes de Integração
+Para executar os testes de integração, use o comando:
 
   ```bash
-dotnet test Auth.IntegrationTests
+dotnet test EligiblesListingAPI
   ```
