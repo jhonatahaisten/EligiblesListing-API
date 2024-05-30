@@ -152,18 +152,18 @@ A API estará disponível em https://localhost:44389 por padrão.
 Construir a imagem Docker
 
   ```bash
-docker build -f ./EligiblesListingAPI/Dockerfile -t case/EligiblesListingAPI:latest .
+docker build -f ./EligiblesListingAPI/Dockerfile -t case/eligibles-listing-api:latest .
   ```
 
 Executar o Container Docker
 
   ```bash
-Para rodar o docker: docker run -it case/EligiblesListingAPI:latest
+docker run -it case/eligibles-listing-api:latest
   ```
 
 ### Executar Testes de Integração
 Para executar os testes de integração, use o comando:
 
   ```bash
-dotnet test EligiblesListingAPI
+dotnet test
   ```
