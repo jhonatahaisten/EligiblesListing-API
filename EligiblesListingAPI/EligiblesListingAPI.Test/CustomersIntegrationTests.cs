@@ -111,7 +111,7 @@ namespace EligiblesListingAPI.Test
                     },
                     Nationality = "BR",
                     Email = "hermelinda.porto@example.com",
-                    Birthday = "1990-11-05T07:14:15Z",
+                    Birthday = "1990-11-05T06:14:15Z",
                     Registered = "2010-11-15T06:51:20Z",
                     TelephoneNumbers = ["+554277921297"],
                     MobileNumbers = ["+554471613755"],

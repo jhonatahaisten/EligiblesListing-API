@@ -10,7 +10,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["EligiblesListingAPI/EligiblesListingAPI.csproj", "EligiblesListingAPI/"]
-COPY ["EligiblesListingAPI.Application/EligiblesListingAPI.Application.csproj", "EligiblesListingAPI.Application/"]
+COPY ["EligiblesListingAPI.Core/EligiblesListingAPI.Core.csproj", "EligiblesListingAPI.Core/"]
 COPY ["EligiblesListingAPI.Domain/EligiblesListingAPI.Domain.csproj", "EligiblesListingAPI.Domain/"]
 COPY ["EligiblesListingAPI.Infrastructure/EligiblesListingAPI.Infrastructure.csproj", "EligiblesListingAPI.Infrastructure/"]
 RUN dotnet restore "./EligiblesListingAPI/EligiblesListingAPI.csproj"
