@@ -15,7 +15,7 @@ namespace EligiblesListingAPI.Core.Resources
         public CustomerCore(IDataLoadService IDataLoadService)
         {
 
-            _customers = IDataLoadService.GetAll();
+            _customers = IDataLoadService.GetAllCustomers();
 
             especialBoxes = new List<(double minLon, double minLat, double maxLon, double maxLat)>
             {

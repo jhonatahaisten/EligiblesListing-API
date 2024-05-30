@@ -4,38 +4,38 @@
     {
         private static readonly Dictionary<string, ERegion> _stateRegionMap = new Dictionary<string, ERegion>
         {
-            { "ACRE", ERegion.Norte },
-            { "ALAGOAS", ERegion.Nordeste },
-            { "AMAPÁ", ERegion.Norte },
-            { "AMAZONAS", ERegion.Norte },
-            { "BAHIA", ERegion.Nordeste },
-            { "CEARÁ", ERegion.Nordeste },
-            { "DISTRITO FEDERAL", ERegion.CentroOeste },
-            { "ESPÍRITO SANTO", ERegion.Sudeste },
-            { "GOIÁS", ERegion.CentroOeste },
-            { "MARANHÃO", ERegion.Nordeste },
-            { "MATO GROSSO", ERegion.CentroOeste },
-            { "MATO GROSSO DO SUL", ERegion.CentroOeste },
-            { "MINAS GERAIS", ERegion.Sudeste },
-            { "PARÁ", ERegion.Norte },
-            { "PARAÍBA", ERegion.Nordeste },
-            { "PARANÁ", ERegion.Sul },
-            { "PERNAMBUCO", ERegion.Nordeste },
-            { "PIAUÍ", ERegion.Nordeste },
-            { "RIO DE JANEIRO", ERegion.Sudeste },
-            { "RIO GRANDE DO NORTE", ERegion.Nordeste },
-            { "RIO GRANDE DO SUL", ERegion.Sul },
-            { "RONDÔNIA", ERegion.Norte },
-            { "RORAIMA", ERegion.Norte },
-            { "SANTA CATARINA", ERegion.Sul },
-            { "SÃO PAULO", ERegion.Sudeste },
-            { "SERGIPE", ERegion.Nordeste },
-            { "TOCANTINS", ERegion.Norte }
+            { "ACRE", ERegion.norte },
+            { "ALAGOAS", ERegion.nordeste },
+            { "AMAPÁ", ERegion.norte },
+            { "AMAZONAS", ERegion.norte },
+            { "BAHIA", ERegion.nordeste },
+            { "CEARÁ", ERegion.nordeste },
+            { "DISTRITO FEDERAL", ERegion.centroOeste },
+            { "ESPÍRITO SANTO", ERegion.sudeste },
+            { "GOIÁS", ERegion.centroOeste },
+            { "MARANHÃO", ERegion.nordeste },
+            { "MATO GROSSO", ERegion.centroOeste },
+            { "MATO GROSSO DO SUL", ERegion.centroOeste },
+            { "MINAS GERAIS", ERegion.sudeste },
+            { "PARÁ", ERegion.norte },
+            { "PARAÍBA", ERegion.nordeste },
+            { "PARANÁ", ERegion.sul },
+            { "PERNAMBUCO", ERegion.nordeste },
+            { "PIAUÍ", ERegion.nordeste },
+            { "RIO DE JANEIRO", ERegion.sudeste },
+            { "RIO GRANDE DO NORTE", ERegion.nordeste },
+            { "RIO GRANDE DO SUL", ERegion.sul },
+            { "RONDÔNIA", ERegion.norte },
+            { "RORAIMA", ERegion.norte },
+            { "SANTA CATARINA", ERegion.sul },
+            { "SÃO PAULO", ERegion.sudeste },
+            { "SERGIPE", ERegion.nordeste },
+            { "TOCANTINS", ERegion.norte }
         };
 
         public static ERegion GetRegionByState(string state)
         {
-            return _stateRegionMap.TryGetValue(state.ToUpper(), out var region) ? region : ERegion.Desconhecido;
+            return _stateRegionMap.TryGetValue(state.ToUpper(), out var region) ? region : ERegion.desconhecido;
         }
     }
 }

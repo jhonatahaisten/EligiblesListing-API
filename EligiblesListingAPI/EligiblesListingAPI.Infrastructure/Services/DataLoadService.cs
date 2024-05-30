@@ -6,31 +6,39 @@ using CsvHelper.Configuration;
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
+using Microsoft.Extensions.Configuration;
+
 
 namespace EligiblesListingAPI.Infrastructure.Services
 {
     public class DataLoadService : IDataLoadService
     {
-        public List<Customer> Customers { get; private set; }     
-    
+        public List<Customer> customers { get; private set; }
+        private readonly IConfiguration _configuration;
+
+        public DataLoadService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public void SeedData()
         {
-            Customers = new List<Customer>();
-            LoadCustomersFromCsv("https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.csv");
-            LoadCustomersFromJson("https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.json");
-        }     
+            customers = [];
+            LoadCustomersFromCsv(_configuration["SettingsCustomized:UrlDataCsv"]);
+            LoadCustomersFromJson(_configuration["SettingsCustomized:UrlDataJson"]);
+        }   
         
-        public List<Customer> GetAll()
+        public List<Customer> GetAllCustomers()
         {
-            return Customers;
-        }
+            return customers;
+        }   
 
         private void LoadCustomersFromCsv(string csvUrl)
         {
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(csvUrl);
             HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
 
-            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            CsvConfiguration config = new(CultureInfo.InvariantCulture)
             {
                 HasHeaderRecord = true,
                 HeaderValidated = null,
@@ -38,37 +46,24 @@ namespace EligiblesListingAPI.Infrastructure.Services
                 Encoding = Encoding.UTF8
             };
 
-            using (StreamReader sr = new StreamReader(resp.GetResponseStream()))
-            {
-                string results = sr.ReadToEnd();
-                using (var reader = new StringReader(results))
-                using (var csv = new CsvReader(reader, config))
-                {
-                    csv.Context.RegisterClassMap<RawUserMap>();
-                    var csvCustomers = csv.GetRecords<Customer>().ToList();                   
-                    Customers.AddRange(csvCustomers);
-                }
-            }
+            using StreamReader sr = new(resp.GetResponseStream());
+            string rawResults = sr.ReadToEnd();
+            using StringReader reader = new(rawResults);
+            using CsvReader csv = new(reader, config);
+            csv.Context.RegisterClassMap<RawUserMap>();
+            List<Customer> csvCustomers = csv.GetRecords<Customer>().ToList();
+            customers.AddRange(csvCustomers);
         }
 
         private void LoadCustomersFromJson(string jsonUrl)
         {
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(jsonUrl);
-            HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(jsonUrl);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            using (StreamReader sr = new StreamReader(resp.GetResponseStream()))
-            {               
-                string json = sr.ReadToEnd();
-
-                var jsonCustomers = JsonConvert.DeserializeObject<JsonResponse>(json);              
-                Customers.AddRange(jsonCustomers.Results);
-            }
-        }        
-
-        public class JsonResponse
-        {
-            [JsonProperty("results")]
-            public List<Customer> Results { get; set; }
-        }
+            using StreamReader streamReader = new(response.GetResponseStream());
+            string json = streamReader.ReadToEnd();
+            JsonResponse jsonCustomers = JsonConvert.DeserializeObject<JsonResponse>(json);
+            customers.AddRange(jsonCustomers.Results);
+        }  
     }
 }

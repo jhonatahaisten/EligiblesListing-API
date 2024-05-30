@@ -2,12 +2,12 @@
 {
     public enum ERegion
     {
-        Norte,
-        Nordeste,
-        CentroOeste,
-        Sudeste,
-        Sul,
-        Desconhecido
+        norte,
+        nordeste,
+        centroOeste,
+        sudeste,
+        sul,
+        desconhecido
     }
  
     public enum EType

@@ -4,7 +4,7 @@ namespace EligiblesListingAPI.Core.Abstractions
 {
     public interface IDataLoadService
     {
-        List<Customer> GetAll();
+        List<Customer> GetAllCustomers();
         void SeedData();
     }
 }

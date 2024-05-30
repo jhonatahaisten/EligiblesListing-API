@@ -26,10 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.134.129/FcNugetServer/nuget/": {},
-          "http://nexus.funcionalcorp.net.br/repository/fun-nuget-group/": {},
-          "http://vmbtfs01des/FcNugetServer/Nuget/": {},
-          "http://vmpltapbru01dev.funcional.local/NuGetServer/nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

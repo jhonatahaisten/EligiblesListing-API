@@ -154,9 +154,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Core.csproj",
-      "projectName": "EligiblesListingAPI.Core",
-      "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Core.csproj",
+      "projectUniqueName": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj",
+      "projectName": "EligiblesListingAPI.Application",
+      "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj",
       "packagesPath": "C:\\Users\\jhonata.santos\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -238,13 +238,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://vmpltapbru01dev.funcional.local/NuGetServer/nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
-    },
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://vmbtfs01des/FcNugetServer/Nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
+      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://192.168.134.129/FcNugetServer/nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
     },
     {
       "code": "NU1803",
@@ -256,7 +250,13 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://192.168.134.129/FcNugetServer/nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
+      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://vmbtfs01des/FcNugetServer/Nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
+    },
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Você está executando a operação 'restore' com uma fonte 'HTTP', 'http://vmpltapbru01dev.funcional.local/NuGetServer/nuget/'. O acesso não HTTPS será removido em uma versão futura. Considere migrar para uma fonte 'HTTPS'."
     }
   ]
 }

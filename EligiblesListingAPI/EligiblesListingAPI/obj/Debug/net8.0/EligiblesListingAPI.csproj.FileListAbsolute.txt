@@ -1,41 +1,3 @@
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.AssemblyReference.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfoInputs.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfo.cs
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.CoreCompileInputs.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.sourcelink.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\appsettings.Development.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\appsettings.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.exe
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.deps.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.runtimeconfig.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.pdb
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\CsvHelper.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.pdb
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.build.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.development.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.EligiblesListingAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.EligiblesListingAPI.props
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EligiblesListingAPI.props
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EligiblesListingAPI.props
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\scopedcss\bundle\EligiblesListingAPI.styles.css
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\Eligible.A2A9BCB0.Up2Date
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\refint\EligiblesListingAPI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.pdb
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.genruntimeconfig.cache
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\ref\EligiblesListingAPI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\PhoneNumbers.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.AssemblyReference.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfoInputs.cache
@@ -78,6 +40,45 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.genruntimeconfig.cache
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\ref\EligiblesListingAPI.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\appsettings.Development.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\appsettings.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.exe
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.deps.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.runtimeconfig.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\CsvHelper.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\PhoneNumbers.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Core.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Core.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.AssemblyReference.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfoInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.AssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.csproj.CoreCompileInputs.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.sourcelink.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.build.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.development.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.EligiblesListingAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.EligiblesListingAPI.props
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.EligiblesListingAPI.props
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EligiblesListingAPI.props
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\scopedcss\bundle\EligiblesListingAPI.styles.css
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\Eligible.A2A9BCB0.Up2Date
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\refint\EligiblesListingAPI.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.genruntimeconfig.cache
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\ref\EligiblesListingAPI.dll
