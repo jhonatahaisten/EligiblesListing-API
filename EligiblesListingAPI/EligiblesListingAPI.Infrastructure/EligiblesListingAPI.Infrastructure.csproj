@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EligiblesListingAPI.Application\EligiblesListingAPI.Core.csproj" />
+    <ProjectReference Include="..\EligiblesListingAPI.Core\EligiblesListingAPI.Core.csproj" />
     <ProjectReference Include="..\EligiblesListingAPI.Domain\EligiblesListingAPI.Domain.csproj" />
   </ItemGroup>
 
