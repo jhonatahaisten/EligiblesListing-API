@@ -6,8 +6,7 @@ using System.Text;
 namespace EligiblesListingAPI.Test
 {
     public class CustomerFixture : IClassFixture<WebApplicationFactory<Program>>
-    {
-        
+    {        
         private readonly HttpClient _client;
         private readonly WebApplicationFactory<Program> _factory;
         private readonly string eligiblesEndPoint = "/api/customers/eligibles";
@@ -19,13 +18,13 @@ namespace EligiblesListingAPI.Test
         }
         private async Task<HttpResponseMessage> InvokeCustomersEligiblesAPIAsync(PagedRequest request)
         {
-            StringContent content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+            StringContent content = new(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             return  await _client.PostAsync(eligiblesEndPoint, content);
         }
-        private async Task<string> CustomersEligiblesResponseSerialization(HttpResponseMessage response)
+        private static async Task<string> CustomersEligiblesResponseSerialization(HttpResponseMessage response)
         {
-            var responseString = await response.Content.ReadAsStringAsync();
-            var customers = JsonConvert.DeserializeObject<List<CustomerResponse>>(responseString);
+            string responseString = await response.Content.ReadAsStringAsync();
+            List<CustomerResponse> customers = JsonConvert.DeserializeObject<List<CustomerResponse>>(responseString);
 
             return JsonConvert.SerializeObject(customers);
         }
@@ -33,27 +32,26 @@ namespace EligiblesListingAPI.Test
         [Fact]
         public async Task Post_Eligibles_Returns_FilteredCustomers()
         {
-            PagedRequest request = new PagedRequest
+            PagedRequest request = new()
             {
                 PageNumber = 1,
                 PageSize = 1,
                 TotalCount = 2,
-                Users = new List<CustomerRequest>
-                {
-                    new CustomerRequest { Region = "sul", Type = "laborious" }
-                }
+                Users =
+                [
+                    new() { Region = "sul", Type = "laborious" }
+                ]
             };
 
             HttpResponseMessage response = await InvokeCustomersEligiblesAPIAsync(request);
         
             response.EnsureSuccessStatusCode();
 
-            List<CustomerResponse> expectedCustomers = new List<CustomerResponse>
-            {
-                new CustomerResponse
-                {
+            List<CustomerResponse> expectedCustomers =
+            [
+                new() {
                     Type = "laborious",
-                    Gender = "F",
+                    Gender = "f",
                     Name = new Name { Title = "mrs", First = "iza", Last = "gonçalves" },
                     Location = new Location
                     {
@@ -69,8 +67,8 @@ namespace EligiblesListingAPI.Test
                     Email = "iza.gonçalves@example.com",
                     Birthday = "1948-08-07T06:02:24Z",
                     Registered = "2009-01-20T08:25:28Z",
-                    TelephoneNumbers = new[] { "+558130299534" },
-                    MobileNumbers = new[] { "+558715674325" },
+                    TelephoneNumbers = ["+558130299534"],
+                    MobileNumbers = ["+558715674325"],
                     Picture = new Picture
                     {
                         Large = "https://randomuser.me/api/portraits/women/85.jpg",
@@ -79,39 +77,38 @@ namespace EligiblesListingAPI.Test
                     }
                 },
 
-            };
+            ];
 
             string expectedJson = JsonConvert.SerializeObject(expectedCustomers);
             string actualJson = await CustomersEligiblesResponseSerialization(response);
 
             Assert.Equal(expectedJson, actualJson);
-
         }
 
         [Fact]
         public async Task Post_Eligibles_Returns_FilteredCustomers_Paginated()
         {
-            var request = new PagedRequest
+            PagedRequest request = new()
             {
                 PageNumber = 10,
                 PageSize = 1,
                 TotalCount = 15,
-                Users = new List<CustomerRequest>
-                {
+                Users =
+                [
                     new CustomerRequest { Region = "nordeste", Type = "laborious" }
-                }
+                ]
             };
 
             HttpResponseMessage response = await InvokeCustomersEligiblesAPIAsync(request);
 
             response.EnsureSuccessStatusCode();
 
-            List<CustomerResponse> expectedCustomers = new List<CustomerResponse>
-            {
+            List<CustomerResponse> expectedCustomers =
+            [
                 new CustomerResponse
                 {
                     Type = "laborious",
-                    Gender = "F",
+                    Gender = "f",
                     Name = new Name { Title = "ms", First = "jerueza", Last = "moura" },
                     Location = new Location
                     {
@@ -127,8 +124,8 @@ namespace EligiblesListingAPI.Test
                     Email = "jerueza.moura@example.com",
                     Birthday = "1948-08-29T06:01:44Z",
                     Registered = "2013-11-28T12:04:46Z",
-                    TelephoneNumbers = new[] { "+555667280423" },
-                    MobileNumbers = new[] { "+551840117309" },
+                    TelephoneNumbers = ["+555667280423"],
+                    MobileNumbers = ["+551840117309"],
                     Picture = new Picture
                     {
                         Large = "https://randomuser.me/api/portraits/women/14.jpg",
@@ -136,11 +133,10 @@ namespace EligiblesListingAPI.Test
                         Thumbnail = "https://randomuser.me/api/portraits/thumb/women/14.jpg"
                     }
                 }
-            };
+            ];
 
             string expectedJson = JsonConvert.SerializeObject(expectedCustomers);
             string actualJson = await CustomersEligiblesResponseSerialization(response);
-
 
             Assert.Equal(expectedJson, actualJson);
         }
@@ -148,15 +144,15 @@ namespace EligiblesListingAPI.Test
         [Fact]
         public async Task Post_Ineligibles_Returns_FilteredCustomers()
         {
-            PagedRequest request = new PagedRequest
+            PagedRequest request = new()
             {
                 PageNumber = 1,
                 PageSize = 1,
                 TotalCount = 100,
-                Users = new List<CustomerRequest>
-                {
+                Users =
+                [
                     new CustomerRequest { Region = "nordeste", Type = "normal" }
-                }
+                ]
             };
 
             HttpResponseMessage response = await InvokeCustomersEligiblesAPIAsync(request);
@@ -167,7 +163,6 @@ namespace EligiblesListingAPI.Test
 
             string expectedJson = JsonConvert.SerializeObject(expectedCustomers);
             string actualJson = await CustomersEligiblesResponseSerialization(response);
-
 
             Assert.Equal(expectedJson, actualJson);
         }

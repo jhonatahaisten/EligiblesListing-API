@@ -24,29 +24,14 @@ namespace EligiblesListingAPI.Test
         {
             builder.ConfigureServices(services =>
             {
-                // Remove the app's IDataLoadService registration
-                var descriptor = services.SingleOrDefault(
+                ServiceDescriptor? descriptor = services.SingleOrDefault(
                     d => d.ServiceType == typeof(IDataLoadService));
 
                 if (descriptor != null)
                 {
                     services.Remove(descriptor);
-                }
-
-                // Add a mock IDataLoadService
-                var mockDataLoadService = new Mock<IDataLoadService>();
-                mockDataLoadService.Setup(m => m.GetAllCustomers()).Returns(GetTestCustomers());
-
-                services.AddSingleton(mockDataLoadService.Object);
+                }      
             });
-        }
-
-        private List<Customer> GetTestCustomers()
-        {
-            return new List<Customer>
-            {
-                // Add test data here
-            };
-        }
+        }       
     }
 }

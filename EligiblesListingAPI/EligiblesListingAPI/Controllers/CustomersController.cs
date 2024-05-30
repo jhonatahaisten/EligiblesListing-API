@@ -6,23 +6,14 @@ namespace EligiblesListingAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CustomersController : ControllerBase
+    public class CustomersController(ICustomerCore ICustomerCore) : ControllerBase
     {
-        private readonly IDataService _iDataService;
-        private readonly ICustomerCore _ICustomerCore;
-        private readonly HttpClient _httpClient;
-
-        public CustomersController(IDataService iDataService, ICustomerCore ICustomerCore)
-        {
-            _iDataService = iDataService;
-            _ICustomerCore = ICustomerCore;
-            _httpClient = new HttpClient();
-        }        
+        private readonly ICustomerCore _ICustomerCore = ICustomerCore;
 
         [HttpPost("Eligibles")]
         public async Task<IActionResult> ClassifyCustomers([FromBody] PagedRequest filterRequest)
         {
-            var filteredResponse = _ICustomerCore.GetFilteredCustomers(filterRequest);
+            List<CustomerResponse> filteredResponse = _ICustomerCore.GetFilteredCustomers(filterRequest);
             return Ok(filteredResponse);
         }
     }

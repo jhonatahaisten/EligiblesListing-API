@@ -18,7 +18,8 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton<ICustomerCore, CustomerCore>();
-builder.Services.AddSingleton<IDataService, DataService>();
+builder.Services.AddSingleton<IEnrichCustomerCore, EnrichCustomerCore>();
+builder.Services.AddSingleton<IFileService, FileService>();
 builder.Services.AddSingleton<IDataLoadService, DataLoadService>();
 var app = builder.Build();
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EligiblesListingAPI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef54860f89f4a01c7555cc4284174408ea827e5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1be4c9c6249b5b78b6b54397d4f825a543ed4fa5")]
 [assembly: System.Reflection.AssemblyProductAttribute("EligiblesListingAPI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EligiblesListingAPI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

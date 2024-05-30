@@ -2,7 +2,7 @@
 
 namespace EligiblesListingAPI.Core.Abstractions
 {
-    public interface IDataService
+    public interface IFileService
     {      
         List<CustomerResponse> GetCustomersFromCsvLink(string csvContent);
         List<CustomerResponse> GetCustomersFromJsonLink(string jsonContent);

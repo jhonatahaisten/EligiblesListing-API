@@ -1,4 +1,4 @@
-﻿using EligiblesListingAPI.Domain.Enuns;
+﻿using EligiblesListingAPI.Domain.Enums;
 using Newtonsoft.Json;
 
 namespace EligiblesListingAPI.Domain.DTO

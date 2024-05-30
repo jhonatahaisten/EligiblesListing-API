@@ -1,4 +1,4 @@
-﻿namespace EligiblesListingAPI.Domain.Enuns
+﻿namespace EligiblesListingAPI.Domain.Enums
 {
     public enum ERegion
     {

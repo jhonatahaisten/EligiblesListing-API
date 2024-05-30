@@ -1,8 +1,8 @@
-﻿namespace EligiblesListingAPI.Domain.Enuns
+﻿namespace EligiblesListingAPI.Domain.Enums
 {
     public static class StateRegionMapping
     {
-        private static readonly Dictionary<string, ERegion> _stateRegionMap = new Dictionary<string, ERegion>
+        public static readonly Dictionary<string, ERegion> stateRegionMap = new()
         {
             { "ACRE", ERegion.norte },
             { "ALAGOAS", ERegion.nordeste },
@@ -31,11 +31,6 @@
             { "SÃO PAULO", ERegion.sudeste },
             { "SERGIPE", ERegion.nordeste },
             { "TOCANTINS", ERegion.norte }
-        };
-
-        public static ERegion GetRegionByState(string state)
-        {
-            return _stateRegionMap.TryGetValue(state.ToUpper(), out var region) ? region : ERegion.desconhecido;
-        }
+        };       
     }
 }
