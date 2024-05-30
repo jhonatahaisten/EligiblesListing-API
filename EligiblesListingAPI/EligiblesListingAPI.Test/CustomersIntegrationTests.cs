@@ -5,28 +5,16 @@ using System.Text;
 
 namespace EligiblesListingAPI.Test
 {
-    public class CustomerFixture : IClassFixture<WebApplicationFactory<Program>>
-    {        
+    public class CustomersIntegrationTests : IClassFixture<WebApplicationFactory<Program>>
+    {
         private readonly HttpClient _client;
         private readonly WebApplicationFactory<Program> _factory;
         private readonly string eligiblesEndPoint = "/api/customers/eligibles";
 
-        public CustomerFixture(WebApplicationFactory<Program> factory)
+        public CustomersIntegrationTests(WebApplicationFactory<Program> factory)
         {
             _factory = factory;
             _client = _factory.CreateClient();
-        }
-        private async Task<HttpResponseMessage> InvokeCustomersEligiblesAPIAsync(PagedRequest request)
-        {
-            StringContent content = new(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
-            return  await _client.PostAsync(eligiblesEndPoint, content);
-        }
-        private static async Task<string> CustomersEligiblesResponseSerialization(HttpResponseMessage response)
-        {
-            string responseString = await response.Content.ReadAsStringAsync();
-            List<CustomerResponse> customers = JsonConvert.DeserializeObject<List<CustomerResponse>>(responseString);
-
-            return JsonConvert.SerializeObject(customers);
         }
 
         [Fact]
@@ -34,9 +22,9 @@ namespace EligiblesListingAPI.Test
         {
             PagedRequest request = new()
             {
-                PageNumber = 1,
+                PageNumber = 8,
                 PageSize = 1,
-                TotalCount = 2,
+                TotalCount = 10,
                 Users =
                 [
                     new() { Region = "sul", Type = "laborious" }
@@ -44,38 +32,39 @@ namespace EligiblesListingAPI.Test
             };
 
             HttpResponseMessage response = await InvokeCustomersEligiblesAPIAsync(request);
-        
+
             response.EnsureSuccessStatusCode();
 
             List<CustomerResponse> expectedCustomers =
             [
-                new() {
+                new()
+                {
                     Type = "laborious",
                     Gender = "f",
-                    Name = new Name { Title = "mrs", First = "iza", Last = "gonçalves" },
+                    Name = new Name { Title = "mrs", First = "melina", Last = "souza" },
                     Location = new Location
                     {
                         Region = "sul",
-                        Street = "3558 rua pernambuco ",
-                        City = "juazeiro",
+                        Street = "1856 rua um",
+                        City = "garanhuns",
                         State = "santa catarina",
-                        Postcode = 53106,
-                        Coordinates = new Coordinates { Latitude = "-2.6880", Longitude = "-146.8402" },
-                        Timezone = new Timezone { Offset = "-4:00", Description = "Atlantic Time (Canada), Caracas, La Paz" }
+                        Postcode = 51640,
+                        Coordinates = new Coordinates { Latitude = "-16.4160", Longitude = "-93.7689" },
+                        Timezone = new Timezone { Offset = "+2:00", Description = "Kaliningrad, South Africa" }
                     },
                     Nationality = "BR",
-                    Email = "iza.gonçalves@example.com",
-                    Birthday = "1948-08-07T06:02:24Z",
-                    Registered = "2009-01-20T08:25:28Z",
-                    TelephoneNumbers = ["+558130299534"],
-                    MobileNumbers = ["+558715674325"],
+                    Email = "melina.souza@example.com",
+                    Birthday = "1963-11-03T13:17:36Z",
+                    Registered = "2015-07-08T17:33:35Z",
+                    TelephoneNumbers = ["+552894017853"],
+                    MobileNumbers = ["+556111414458"],
                     Picture = new Picture
                     {
-                        Large = "https://randomuser.me/api/portraits/women/85.jpg",
-                        Medium = "https://randomuser.me/api/portraits/med/women/85.jpg",
-                        Thumbnail = "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+                        Large = "https://randomuser.me/api/portraits/women/46.jpg",
+                        Medium = "https://randomuser.me/api/portraits/med/women/46.jpg",
+                        Thumbnail = "https://randomuser.me/api/portraits/thumb/women/46.jpg"
                     }
-                },
+                }
 
             ];
 
@@ -90,9 +79,9 @@ namespace EligiblesListingAPI.Test
         {
             PagedRequest request = new()
             {
-                PageNumber = 10,
+                PageNumber = 4,
                 PageSize = 1,
-                TotalCount = 15,
+                TotalCount = 10,
                 Users =
                 [
                     new CustomerRequest { Region = "nordeste", Type = "laborious" }
@@ -105,32 +94,32 @@ namespace EligiblesListingAPI.Test
 
             List<CustomerResponse> expectedCustomers =
             [
-                new CustomerResponse
+                new()
                 {
                     Type = "laborious",
                     Gender = "f",
-                    Name = new Name { Title = "ms", First = "jerueza", Last = "moura" },
+                    Name = new Name { Title = "mrs", First = "hermelinda", Last = "porto" },
                     Location = new Location
                     {
                         Region = "nordeste",
-                        Street = "416 rua três",
-                        City = "magé",
+                        Street = "1000 rua pernambuco ",
+                        City = "angra dos reis",
                         State = "alagoas",
-                        Postcode = 73804,
-                        Coordinates = new Coordinates { Latitude = "15.3004", Longitude = "-82.4361" },
-                        Timezone = new Timezone { Offset = "+4:00", Description = "Abu Dhabi, Muscat, Baku, Tbilisi" }
+                        Postcode = 35371,
+                        Coordinates = new Coordinates { Latitude = "63.3179", Longitude = "-64.1995" },
+                        Timezone = new Timezone { Offset = "-2:00", Description = "Mid-Atlantic" }
                     },
                     Nationality = "BR",
-                    Email = "jerueza.moura@example.com",
-                    Birthday = "1948-08-29T06:01:44Z",
-                    Registered = "2013-11-28T12:04:46Z",
-                    TelephoneNumbers = ["+555667280423"],
-                    MobileNumbers = ["+551840117309"],
+                    Email = "hermelinda.porto@example.com",
+                    Birthday = "1990-11-05T06:14:15Z",
+                    Registered = "2010-11-15T06:51:20Z",
+                    TelephoneNumbers = ["+554277921297"],
+                    MobileNumbers = ["+554471613755"],
                     Picture = new Picture
                     {
-                        Large = "https://randomuser.me/api/portraits/women/14.jpg",
-                        Medium = "https://randomuser.me/api/portraits/med/women/14.jpg",
-                        Thumbnail = "https://randomuser.me/api/portraits/thumb/women/14.jpg"
+                        Large = "https://randomuser.me/api/portraits/women/94.jpg",
+                        Medium = "https://randomuser.me/api/portraits/med/women/94.jpg",
+                        Thumbnail = "https://randomuser.me/api/portraits/thumb/women/94.jpg"
                     }
                 }
             ];
@@ -159,12 +148,27 @@ namespace EligiblesListingAPI.Test
 
             response.EnsureSuccessStatusCode();
 
-            List<CustomerResponse> expectedCustomers = new List<CustomerResponse>();
+            List<CustomerResponse> expectedCustomers = [];
 
             string expectedJson = JsonConvert.SerializeObject(expectedCustomers);
             string actualJson = await CustomersEligiblesResponseSerialization(response);
 
             Assert.Equal(expectedJson, actualJson);
         }
+
+        private async Task<HttpResponseMessage> InvokeCustomersEligiblesAPIAsync(PagedRequest request)
+        {
+            StringContent content = new(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+            return await _client.PostAsync(eligiblesEndPoint, content);
+        }
+
+        private static async Task<string> CustomersEligiblesResponseSerialization(HttpResponseMessage response)
+        {
+            string responseString = await response.Content.ReadAsStringAsync();
+            List<CustomerResponse> customers = JsonConvert.DeserializeObject<List<CustomerResponse>>(responseString);
+
+            return JsonConvert.SerializeObject(customers);
+        }
     }
 }
+
