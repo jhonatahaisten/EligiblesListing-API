@@ -1,7 +1,7 @@
 ﻿using CsvHelper.Configuration;
-using EligiblesListingAPI.Domain.Entities;
+using EligiblesListingAPI.Domain.DTO;
 
-namespace EligiblesListingAPI.Application.Services
+namespace EligiblesListingAPI.Infrastructure.Services
 {
     public class RawUserMap : ClassMap<Customer>
     {

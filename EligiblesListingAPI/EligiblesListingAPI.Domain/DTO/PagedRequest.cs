@@ -1,6 +1,4 @@
-﻿using EligiblesListingAPI.Domain.Entities;
-
-namespace EligiblesListingAPI.Application.DTO
+﻿namespace EligiblesListingAPI.Domain.DTO
 {
     public class PagedRequest
     {

@@ -1,6 +1,4 @@
-﻿using EligiblesListingAPI.Domain.Enuns;
-
-namespace EligiblesListingAPI.Domain.Entities
+﻿namespace EligiblesListingAPI.Domain.DTO
 {
     public class Location
     {

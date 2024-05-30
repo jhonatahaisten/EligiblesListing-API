@@ -1,6 +1,6 @@
-﻿using EligiblesListingAPI.Domain.Entities;
+﻿using EligiblesListingAPI.Domain.DTO;
 
-namespace EligiblesListingAPI.Domain.Interfaces
+namespace EligiblesListingAPI.Core.Abstractions
 {
     public interface IDataService
     {      

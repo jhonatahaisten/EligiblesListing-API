@@ -17,10 +17,8 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Application.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Application.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Domain.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\obj\Debug\net8.0\staticwebassets.build.json
@@ -81,3 +79,5 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\ref\EligiblesListingAPI.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI\obj\Debug\net8.0\EligiblesListingAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Core.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI\bin\Debug\net8.0\EligiblesListingAPI.Core.pdb

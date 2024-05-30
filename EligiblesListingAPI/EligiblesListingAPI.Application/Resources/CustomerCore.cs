@@ -1,23 +1,21 @@
-﻿using EligiblesListingAPI.Application.DTO;
-using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Domain.Entities;
+﻿using EligiblesListingAPI.Domain.DTO;
 using EligiblesListingAPI.Domain.Enuns;
-using EligiblesListingAPI.Domain.Interfaces;
+using EligiblesListingAPI.Core.Abstractions;
 using PhoneNumbers;
 using System.Globalization;
 
-namespace EligiblesListingAPI.Application.Services
+namespace EligiblesListingAPI.Core.Resources
 {
-    public class CustomerService : ICustomerService
+    public class CustomerCore : ICustomerCore
     {
         private readonly List<(double minLon, double minLat, double maxLon, double maxLat)> especialBoxes;
         private readonly List<(double minLon, double minLat, double maxLon, double maxLat)> normalBoxes;
-        private readonly List<CustomerResponse> _customers;
+        private readonly List<Customer> _customers;
 
-        public CustomerService(IDataLoadService iDataLoadService)
+        public CustomerCore(IDataLoadService IDataLoadService)
         {
 
-            _customers = iDataLoadService.GetAll();
+            _customers = IDataLoadService.GetAll();
 
             especialBoxes = new List<(double minLon, double minLat, double maxLon, double maxLat)>
             {
@@ -94,6 +92,30 @@ namespace EligiblesListingAPI.Application.Services
             return EType.laborious;
         }
 
+        
+
+        public List<CustomerResponse> GetFilteredCustomers(PagedRequest pagedRequest)
+        {
+
+            List<CustomerResponse> customerResponses = ConvertToUser(_customers);
+
+            List<CustomerResponse> filteredCustomers = new List<CustomerResponse>();
+
+            foreach (var user in pagedRequest.Users)
+            {
+                List<CustomerResponse> filteredCustomer = customerResponses.Where(c =>string.Equals(c.Type, user.Type) && string.Equals(c.Location.Region, user.Region)).ToList();
+                filteredCustomers.AddRange(filteredCustomer);  
+            }
+
+            List<CustomerResponse> pagedCustomers = filteredCustomers
+                .Take(pagedRequest.TotalCount)
+                .Skip((pagedRequest.PageNumber - 1) * pagedRequest.PageSize)
+                .Take(pagedRequest.PageSize)
+                .ToList();
+
+            return pagedCustomers;
+         
+        }
         public List<CustomerResponse> ConvertToUser(List<Customer> rawUsers)
         {
             List<CustomerResponse> customerResponses = rawUsers.Select(rawUser => new CustomerResponse
@@ -138,33 +160,10 @@ namespace EligiblesListingAPI.Application.Services
             return customerResponses;
 
         }
-
-        public List<CustomerResponse> GetFilteredCustomers(PagedRequest pagedRequest)
-        {
-             List<CustomerResponse> filteredCustomers = new List<CustomerResponse>();
-
-            foreach (var user in pagedRequest.Users)
-            {
-                var filteredCustomer = _customers.Where(c =>c.Type == user.Type && c.Location.Region == user.Region);
-                filteredCustomers.AddRange(filteredCustomer);     
-
-            }
-           // (EType)Enum.Parse(typeof(EType)
-
-            //var customerResponses = ConvertToUser(filteredCustomers);
-            List<CustomerResponse> pagedCustomers = filteredCustomers
-                .Skip((pagedRequest.PageNumber - 1) * pagedRequest.PageSize)
-                .Take(pagedRequest.PageSize)
-                .ToList();
-
-            return pagedCustomers;
-         
-        }
-
-        private List<Customer> GetAllCustomers()
+        private List<CustomerCore> GetAllCustomers()
         {
 
-            return new List<Customer>();
+            return new List<CustomerCore>();
         }
 
     }

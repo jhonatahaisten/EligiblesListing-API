@@ -1,4 +1,4 @@
-﻿namespace EligiblesListingAPI.Domain.Entities
+﻿namespace EligiblesListingAPI.Domain.DTO
 {
     public class Timezone
     {

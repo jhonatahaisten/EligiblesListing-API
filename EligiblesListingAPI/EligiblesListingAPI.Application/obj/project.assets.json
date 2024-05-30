@@ -154,9 +154,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj",
-      "projectName": "EligiblesListingAPI.Application",
-      "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Application.csproj",
+      "projectUniqueName": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Core.csproj",
+      "projectName": "EligiblesListingAPI.Core",
+      "projectPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\EligiblesListingAPI.Core.csproj",
       "packagesPath": "C:\\Users\\jhonata.santos\\.nuget\\packages\\",
       "outputPath": "C:\\Git\\#PESSOAL#\\CaseJuntosSomosMais\\EligiblesListingAPI\\EligiblesListingAPI.Application\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,37 +1,26 @@
-﻿using EligiblesListingAPI.Domain.Entities;
-using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Domain.Interfaces;
+﻿using EligiblesListingAPI.Domain.DTO;
+using EligiblesListingAPI.Core.Abstractions;
 using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Newtonsoft.Json;
-using EligiblesListingAPI.Application.Services;
 using System.Net;
-using System.Reflection.PortableExecutable;
 using System.Text;
-using System.Net.Http.Json;
 
-
-namespace EligiblesListingAPI.Infrastructure.Data
+namespace EligiblesListingAPI.Infrastructure.Services
 {
     public class DataLoadService : IDataLoadService
     {
-        public List<CustomerResponse> Customers { get; private set; }
-        private readonly ICustomerService _iCustomerService;
-
+        public List<Customer> Customers { get; private set; }     
+    
         public void SeedData()
         {
-            Customers = new List<CustomerResponse>();
+            Customers = new List<Customer>();
             LoadCustomersFromCsv("https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.csv");
             LoadCustomersFromJson("https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.json");
-        }
-
-        public DataLoadService (ICustomerService iCustomerService)
-        {
-            _iCustomerService = iCustomerService;
-        }
-
-        public List<CustomerResponse> GetAll()
+        }     
+        
+        public List<Customer> GetAll()
         {
             return Customers;
         }
@@ -56,9 +45,8 @@ namespace EligiblesListingAPI.Infrastructure.Data
                 using (var csv = new CsvReader(reader, config))
                 {
                     csv.Context.RegisterClassMap<RawUserMap>();
-                    var csvCustomers = csv.GetRecords<Customer>().ToList();
-                    var customerResponses = _iCustomerService.ConvertToUser(csvCustomers);
-                    Customers.AddRange(customerResponses);
+                    var csvCustomers = csv.GetRecords<Customer>().ToList();                   
+                    Customers.AddRange(csvCustomers);
                 }
             }
         }
@@ -72,11 +60,11 @@ namespace EligiblesListingAPI.Infrastructure.Data
             {               
                 string json = sr.ReadToEnd();
 
-                var jsonCustomers = JsonConvert.DeserializeObject<JsonResponse>(json);
-                var customerResponses = _iCustomerService.ConvertToUser(jsonCustomers.Results);
-                Customers.AddRange(customerResponses);
+                var jsonCustomers = JsonConvert.DeserializeObject<JsonResponse>(json);              
+                Customers.AddRange(jsonCustomers.Results);
             }
-        }
+        }        
+
         public class JsonResponse
         {
             [JsonProperty("results")]

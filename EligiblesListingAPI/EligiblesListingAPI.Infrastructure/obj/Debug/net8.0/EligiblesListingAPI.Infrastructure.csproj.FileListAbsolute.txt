@@ -32,5 +32,5 @@ C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListin
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\refint\EligiblesListingAPI.Infrastructure.dll
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\EligiblesListingAPI.Infrastructure.pdb
 C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI - Copia\EligiblesListingAPI.Infrastructure\obj\Debug\net8.0\ref\EligiblesListingAPI.Infrastructure.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Application.dll
-C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Application.pdb
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Core.dll
+C:\Git\#PESSOAL#\CaseJuntosSomosMais\EligiblesListingAPI\EligiblesListingAPI.Infrastructure\bin\Debug\net8.0\EligiblesListingAPI.Core.pdb

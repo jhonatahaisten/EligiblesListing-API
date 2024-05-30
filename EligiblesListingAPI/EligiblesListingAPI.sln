@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EligiblesListingAPI", "EligiblesListingAPI\EligiblesListingAPI.csproj", "{A231570C-4BE1-4479-8A52-4ECE3016E7DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EligiblesListingAPI", "EligiblesListingAPI\EligiblesListingAPI.csproj", "{A231570C-4BE1-4479-8A52-4ECE3016E7DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EligiblesListingAPI.Application", "EligiblesListingAPI.Application\EligiblesListingAPI.Application.csproj", "{978DC37D-437E-4EE6-B488-0EB269084D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EligiblesListingAPI.Core", "EligiblesListingAPI.Application\EligiblesListingAPI.Core.csproj", "{978DC37D-437E-4EE6-B488-0EB269084D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EligiblesListingAPI.Domain", "EligiblesListingAPI.Domain\EligiblesListingAPI.Domain.csproj", "{BBD3477D-0A3B-4237-88BB-9DE9EC6AFE50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EligiblesListingAPI.Domain", "EligiblesListingAPI.Domain\EligiblesListingAPI.Domain.csproj", "{BBD3477D-0A3B-4237-88BB-9DE9EC6AFE50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EligiblesListingAPI.Infrastructure", "EligiblesListingAPI.Infrastructure\EligiblesListingAPI.Infrastructure.csproj", "{C663686F-FA15-4BD2-A349-A2FEE8E006C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EligiblesListingAPI.Infrastructure", "EligiblesListingAPI.Infrastructure\EligiblesListingAPI.Infrastructure.csproj", "{C663686F-FA15-4BD2-A349-A2FEE8E006C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

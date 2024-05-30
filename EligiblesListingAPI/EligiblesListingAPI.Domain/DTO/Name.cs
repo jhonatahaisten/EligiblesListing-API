@@ -1,7 +1,7 @@
-﻿namespace EligiblesListingAPI.Domain.Entities
-{   
+﻿namespace EligiblesListingAPI.Domain.DTO
+{
     public class Name
-    {      
+    {
         public string Title { get; set; }
         public string First { get; set; }
         public string Last { get; set; }

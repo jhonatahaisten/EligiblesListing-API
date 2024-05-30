@@ -483,14 +483,14 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "EligiblesListingAPI.Application/1.0.0": {
+      "EligiblesListingAPI.Core/1.0.0": {
         "dependencies": {
           "CsvHelper": "32.0.3",
           "EligiblesListingAPI.Domain": "1.0.0",
           "libphonenumber-csharp": "8.13.37"
         },
         "runtime": {
-          "EligiblesListingAPI.Application.dll": {}
+          "EligiblesListingAPI.Core.dll": {}
         }
       },
       "EligiblesListingAPI.Domain/1.0.0": {
@@ -504,7 +504,7 @@
       "EligiblesListingAPI.Infrastructure/1.0.0": {
         "dependencies": {
           "CsvHelper": "32.0.3",
-          "EligiblesListingAPI.Application": "1.0.0",
+          "EligiblesListingAPI.Core": "1.0.0",
           "EligiblesListingAPI.Domain": "1.0.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Net.Http": "4.3.4"
@@ -934,7 +934,7 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "EligiblesListingAPI.Application/1.0.0": {
+    "EligiblesListingAPI.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

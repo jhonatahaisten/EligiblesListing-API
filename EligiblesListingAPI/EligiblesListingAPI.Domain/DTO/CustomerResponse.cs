@@ -1,10 +1,7 @@
-﻿using EligiblesListingAPI.Domain.Enuns;
-
-namespace EligiblesListingAPI.Domain.Entities
+﻿namespace EligiblesListingAPI.Domain.DTO
 {  
     public class CustomerResponse
-    {
-       // public string Id { get; set; }
+    {      
         public string Type { get; set; }
         public string Gender { get; set; }
         public Name Name { get; set; }

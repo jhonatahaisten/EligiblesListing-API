@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EligiblesListingAPI.Application\EligiblesListingAPI.Application.csproj" />
+    <ProjectReference Include="..\EligiblesListingAPI.Application\EligiblesListingAPI.Core.csproj" />
     <ProjectReference Include="..\EligiblesListingAPI.Domain\EligiblesListingAPI.Domain.csproj" />
   </ItemGroup>
 

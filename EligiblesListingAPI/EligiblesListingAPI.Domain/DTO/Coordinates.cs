@@ -1,5 +1,5 @@
-﻿namespace EligiblesListingAPI.Domain.Entities
-{  
+﻿namespace EligiblesListingAPI.Domain.DTO
+{
     public class Coordinates
     {
         public string Latitude { get; set; }

@@ -1,25 +1,26 @@
-﻿using EligiblesListingAPI.Domain.Entities;
-using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Domain.Interfaces;
+﻿using EligiblesListingAPI.Domain.DTO;
+using EligiblesListingAPI.Core.Abstractions;
+using EligiblesListingAPI.Core.Resources;
 using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Newtonsoft.Json;
-using EligiblesListingAPI.Application.Services;
 using System.Net;
 using System.Reflection.PortableExecutable;
 using System.Text;
+using EligiblesListingAPI.Infrastructure.Services;
 
 
-namespace EligiblesListingAPI.Infrastructure.Data
+
+namespace EligiblesListingAPI.Infrastructure.Data.Services
 {
     public class DataService : IDataService
     {
-        private readonly ICustomerService _iCustomerService;
+        private readonly ICustomerCore _ICustomerCore;
 
-        public DataService(ICustomerService iCustomerService)
+        public DataService(ICustomerCore ICustomerCore)
         {
-            _iCustomerService = iCustomerService;
+            _ICustomerCore = ICustomerCore;
         }
 
         public List<CustomerResponse> GetCustomersFromCsvLink(string csvContent)
@@ -35,7 +36,7 @@ namespace EligiblesListingAPI.Infrastructure.Data
                 Encoding = Encoding.UTF8
             };
 
-            List<Customer> rawUsers = new List<Customer>(); 
+            List<Domain.DTO.Customer> rawUsers = new List<Domain.DTO.Customer>(); 
 
             using (StreamReader sr = new StreamReader(resp.GetResponseStream()))
             {
@@ -50,13 +51,13 @@ namespace EligiblesListingAPI.Infrastructure.Data
 
                 }
 
-                return _iCustomerService.ConvertToUser(rawUsers);
+                return _ICustomerCore.ConvertToUser(rawUsers);
             }
         }
         public List<CustomerResponse> GetCustomersFromJsonLink(string jsonContent)
         {
-            List<Customer> rawUsers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
-            return _iCustomerService.ConvertToUser(rawUsers);
+            List<Domain.DTO.Customer> rawUsers = JsonConvert.DeserializeObject<List<Domain.DTO.Customer>>(jsonContent);
+            return _ICustomerCore.ConvertToUser(rawUsers);
         
         }
 

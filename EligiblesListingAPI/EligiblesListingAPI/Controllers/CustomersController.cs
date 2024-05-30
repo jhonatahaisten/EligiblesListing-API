@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using EligiblesListingAPI.Domain.Entities;
-using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Domain.Interfaces;
-using EligiblesListingAPI.Application.Services;
-using EligiblesListingAPI.Application.DTO;
+using EligiblesListingAPI.Domain.DTO;
+using EligiblesListingAPI.Core.Abstractions;
 
 namespace EligiblesListingAPI.Controllers
 {
@@ -12,20 +9,20 @@ namespace EligiblesListingAPI.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly IDataService _iDataService;
-        private readonly ICustomerService _iCustomerService;
+        private readonly ICustomerCore _ICustomerCore;
         private readonly HttpClient _httpClient;
 
-        public CustomersController(IDataService iDataService, ICustomerService iCustomerService)
+        public CustomersController(IDataService iDataService, ICustomerCore ICustomerCore)
         {
             _iDataService = iDataService;
-            _iCustomerService = iCustomerService;
+            _ICustomerCore = ICustomerCore;
             _httpClient = new HttpClient();
         }        
 
         [HttpPost("Eligibles")]
         public async Task<IActionResult> ClassifyCustomers([FromBody] PagedRequest filterRequest)
         {
-            var filteredResponse = _iCustomerService.GetFilteredCustomers(filterRequest);
+            var filteredResponse = _ICustomerCore.GetFilteredCustomers(filterRequest);
             return Ok(filteredResponse);
         }
     }

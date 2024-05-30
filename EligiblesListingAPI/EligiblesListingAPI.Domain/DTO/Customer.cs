@@ -1,10 +1,10 @@
 ﻿using EligiblesListingAPI.Domain.Enuns;
 using Newtonsoft.Json;
 
-namespace EligiblesListingAPI.Domain.Entities
+namespace EligiblesListingAPI.Domain.DTO
 {
     public class Customer
-    {   
+    {
         public EType? Type { get; set; }
         public string Gender { get; set; }
         public Name Name { get; set; }
@@ -17,6 +17,6 @@ namespace EligiblesListingAPI.Domain.Entities
         public string Phone { get; set; }
         public string Cell { get; set; }
         public Picture Picture { get; set; }
-   
+
     }
 }

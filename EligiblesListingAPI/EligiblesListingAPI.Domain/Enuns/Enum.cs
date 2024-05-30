@@ -1,9 +1,5 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-
-namespace EligiblesListingAPI.Domain.Enuns
+﻿namespace EligiblesListingAPI.Domain.Enuns
 {
-
     public enum ERegion
     {
         Norte,
@@ -13,7 +9,6 @@ namespace EligiblesListingAPI.Domain.Enuns
         Sul,
         Desconhecido
     }
-
  
     public enum EType
     {

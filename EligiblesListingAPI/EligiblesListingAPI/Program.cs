@@ -1,6 +1,7 @@
-using EligiblesListingAPI.Application.Interfaces;
-using EligiblesListingAPI.Domain.Interfaces;
-using EligiblesListingAPI.Infrastructure.Data;
+using EligiblesListingAPI.Core.Abstractions;
+using EligiblesListingAPI.Core.Resources;
+using EligiblesListingAPI.Infrastructure.Data.Services;
+using EligiblesListingAPI.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddSingleton<ICustomerService, EligiblesListingAPI.Application.Services.CustomerService>();
+builder.Services.AddSingleton<ICustomerCore, CustomerCore>();
 builder.Services.AddSingleton<IDataService, DataService>();
 builder.Services.AddSingleton<IDataLoadService, DataLoadService>();
 var app = builder.Build();
