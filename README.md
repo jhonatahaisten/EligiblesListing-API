@@ -1,4 +1,3 @@
-# Code Challenge Juntos Somos+
 ## --Eligibles Listing API--
 
 Está é uma API construída usando ASP.NET seguindo os princípios da Clean Architecture. Esta API permite a listagem, filtragem e paginação de clientes a partir de dados fornecidos em formatos CSV e JSON.
