@@ -43,8 +43,8 @@ No arquivo `appsettings.json`, configure as URLs para os dados CSV e JSON:
 ```json
 {
   "SettingsCustomized": {
-    "UrlDataCsv": "https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.csv",
-    "UrlDataJson": "https://storage.googleapis.com/juntossomosmais-code-challenge/input-backend.json"
+    "UrlDataCsv": "<SEU_LINK.csv>",
+    "UrlDataJson": "<SEU_LINK.json>"
   },
   "Logging": {
     "LogLevel": {
@@ -59,7 +59,7 @@ No arquivo `appsettings.json`, configure as URLs para os dados CSV e JSON:
 
 1. Clone o repositório:
 ```bash
-    git clone https://github.com/jhonatahaisten/CaseJuntosSomosMais.git
+    git clone https://github.com/jhonatahaisten/EligiblesListing-API.git
     cd EligiblesListingAPI
 ```
 
